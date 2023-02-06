@@ -5,6 +5,7 @@
    ON S.Id = A.ID;
 ---------------------------------------------------
 2. שלוף את המחיר הכולל של קורסים אליהם נרשם מארק אנטוני.
+
 SELECT SUM(A.Cost)
     FROM Students AS S INNER JOIN Activities AS A
    ON S.Id = A.ID
@@ -32,6 +33,7 @@ SELECT SUM(A.Cost)
                               FROM Activities);
 -------------------------------------------------
 6. עדכון עליית מחירים לכלל הקורסים בגובה 12$ (לא כולל טניס או גולף).
+
 UPDATE Activities
    SET Cost = Cost + 12
    WHERE Activity NOT IN ('Tennis','Golf');
@@ -43,6 +45,7 @@ UPDATE Activities
    WHERE Activity = 'Swimming';
 -------------------------------------------------
 8. שלוף את כל הפריטים של הפעילות שמתחילים באות S ושהעלות שלהם נמוכה מ- 35$ סדר את הרשימה לפי עלות בסדר עולה.
+
 SELECT * FROM Activities
    WHERE Activity LIKE 'S%'
    AND Cost < '$35'
