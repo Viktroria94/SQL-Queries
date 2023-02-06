@@ -1,3 +1,7 @@
+--TABLE1 Students: Student varchar (50), ID int
+--TABLE2 Activities: ID int, Activity varchar(50), Cost int
+
+
 1.שלוף את שמות התלמידים ועליות הקורסים שאליהם הם רשומים.
 
  SELECT S.Student, A.Activity
